@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> PYTHON </h1>
+<script>
+    console.log("Hello");
+    console.log("JavaScript");
+
+    //keywords and variables
+    //var,let,const
+
+    //var age ; Declaration
+    //age = 20; Initialization
+
+    var age =20;
+    age=30; //re-initialization
+    var age=40; //re-declaration
+    console.log("Age :",age);
+
+    //let
+    let course = "mern";
+    course = "dsa"; //Re-initialization
+    // let course = "java"; //Re-declaration not allowed
+    console.log("Course :"  , course);
+
+    //const
+    const pi = 3.14;
+    // pi = 3.14159; //Re-initialization and re- declaration is not allowed
+    console.log("PI :",pi);
+
+
+    let username = " admin";
+    let password = "admin123";
+
+    if(username == "admin" && password == "admin123"){
+        console.log("Login Success");
+    }else{
+        console.log("Login Failed");
+    }
+
+    function student(name,clg){
+        console.log("hello",name);
+    }
+    student("John","sece");
+    student("Doe","sece");
+    student("Smith","sece");
+
+// create employee function
+//names and different company with same college
+    function employee(name,company,clg){
+        console.log("hello",name,"from",company,"studied in",clg);
+    }
+
+    employee("kumar","Google","sece");
+    employee("allan","Microsoft","sece");
+    employee("sagar","Amazon","sece");
+
+    let data = function(){
+        return "hello JavaScript";
+    }
+    console.log(data());
+
+    //important arrow function with and without parameter
+     
+    let mult1 =()=> {
+        return "hello arrow function";
+    } 
+    console.log(mult1());
+
+    let mult2 = (a,b) => {
+        return a*b;
+    }
+    console.log(mult2(5,10));
+
+    //call back function
+
+    function sece(callback){
+        console.log("hello");
+        callback();
+    }
+    function stud(){
+        console.log("callback function");
+    }
+    sece(stud);
+
+    function whatsapp(callback){
+        console.log("notification");
+        callback();
+    }
+    function notification(){
+        console.log("msg got");
+    }
+    whatsapp(notification);
+
+
+    //promise is used to avoid the callback
+    //resolve and reject are the two parameters of promise
+    //
+    let fetch_api = new Promise((reslove,reject) => {
+        let api = false;
+        if(api){
+            resolve("Fetched Api data")
+        }else{
+            reject("Api not found")
+        }
+    })
+
+    let fetch_api = new Promise((resolve,reject) => {
+        let api = false;
+        if(api){
+            resolve("Fetched Api data")
+        }else{
+            reject("Api not found")
+        }
+    })
+
+
+
+
+</script>
+
+    <table>
+        <thead>
+            <tr>
+                <td><img src=".\Germany Flag Over Brandenburg Gate at Sunset.png" width ="100" height="200"></td>
+                <td><img src=".\Germany_ Berlin Lights and Reflections.png"></td>
+            </tr>
+            <tr>
+                <td><img src=".\Germany_ Berlin Lights and Reflections.png"></td>
+                <td><img src=".\Germany Flag Over Brandenburg Gate at Sunset.png"></td>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <td><img src=".\Germany Flag Over Brandenburg Gate at Sunset.png"></td>
+                <td><img src=".\Germany_ Berlin Lights and Reflections.png"></td>
+            </tr>
+            <tr>
+                <td><img src=".\Germany_ Berlin Lights and Reflections.png"></td>
+                <td><img src=".\Germany Flag Over Brandenburg Gate at Sunset.png"></td>
+            </tr>
+        </thead><th>
+            <td><img src=".\Germany Flag Over Brandenburg Gate at Sunset.png"></td>
+            <td><img src=".\Germany_ Berlin Lights and Reflections.png"></td>
+        </th>
+        <th>
+            <td><img src=".\Germany_ Berlin Lights and Reflections.png"></td>
+            <td><img src=".\Germany Flag Over Brandenburg Gate at Sunset.png"></td>
+        </th>
+    </table>
+
+    
+    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam temporibus culpa deserunt. Laborum adipisci necessitatibus repellat expedita, nam sit, obcaecati, minus autem voluptates maxime ea. Quo fugit suscipit impedit. Quisquam.</P>
+</body>
+</html>
