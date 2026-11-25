@@ -108,17 +108,101 @@
         }else{
             reject("Api not found")
         }
-    })
+    });
+    fetch_api
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
 
-    let fetch_api = new Promise((resolve,reject) => {
-        let api = false;
-        if(api){
-            resolve("Fetched Api data")
-        }else{
-            reject("Api not found")
+    // double ==  and triple === uses
+    // double ==  checks only value
+    // triple === checks value and data type
+
+    var a=10;
+    var b="10";
+    console.log(a==b);
+    console.log(a===b);
+     
+    
+
+    let emp=[
+        {
+        emp_id:101,
+        emp_name:"vishnu",
+        emp_salary:20000,
+                    skills:["python","java","javascript"]
+
+        },{
+            emp_id:102,
+            emp_name:"sagar",
+            emp_salary:30000,
+                        skills:["python","java","javascript"]
+
+        },{
+            emp_id:103,
+            emp_name:"kumar",
+            emp_salary:40000,
+                        skills:["python","java","javascript"]
+
         }
-    })
+        ,{
+            emp_id:100,
+            emp_name:"kumar",
+            emp_salary:40000,
+            skills:["python","java","javascript"]
+        },{
+            emp_id:200,
+            emp_name:"saga",
+            salary:60000,
+            //nested object
+            //key and values
+            //key: value    
+            //object inside object
+            //object inside array
+            //key cannot be dublicate but the value can be doublicate
+            company:{
+                c1:"TCS",
+                c2:"Architecture"
+        }
+    },
+    ]
 
+    console.log(emp[3].skills[1]);
+    console.log(emp[4].company.c2);
+    console.log(emp[4].salary);
+
+
+    //Dot Notation
+    //console.log(emp.emp_name);
+    //square bracket notation
+    //console.log(emp["salary"]);
+
+
+    // object to string
+    let stringify_data = JSON.stringify(emp);
+    console.log(stringify_data);
+    //string to object
+    let parse_data = JSON.parse(stringify_data);
+    console.log(parse_data);
+
+
+    //without replacing orginal data updating salary of emp_id 102 to 50000
+
+    //let copied_data = emp;
+    //copied_data.salary = 80000;
+
+    //shallow copy(using spread operator)
+
+    //let copied_data = { ...emp };
+    //copied_data.salary = 80000;
+    //copied_data.company.c1 = "Infosys";
+
+
+    //Deep copy
+    let copied_data = JSON.parse(JSON.stringify(emp));
+    copied_data[4].company.c1="google";
+
+    console.log("original data" , emp);
+    console.log("copied data",copied_data);
 
 
 
