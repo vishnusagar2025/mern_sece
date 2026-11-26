@@ -1,4 +1,7 @@
 import Home from "./Home";
+import Counter from "./Hooks/Counter";
+import Score from "./Hooks/Score";
+import Run from "./Hooks/Run";
 
 function Data(props) {
   return (
@@ -8,14 +11,14 @@ function Data(props) {
   );
 }
 
-function Players(data) {
+function Players(props) {
   return (
     <div>
       <h2>List of Players</h2>
 
       {/* Container to line up the cards side-by-side */}
       <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-        {data.obj1.map((player, index) => {
+        {props.obj1.map((player, index) => {
           return (
             <div
               key={index}
@@ -59,6 +62,9 @@ function App() {
       <h1>This is the App Component</h1>
       <h2>JS File</h2>
       <Home />
+      <Counter />
+      <Score />
+      <Run />
       <Data obj="SECE College" />
       <Players obj1={players_data} />
     </div>
@@ -66,3 +72,5 @@ function App() {
 }
 
 export default App;
+
+
