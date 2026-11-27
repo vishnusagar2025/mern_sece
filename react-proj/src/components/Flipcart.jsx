@@ -1,26 +1,17 @@
-import Home from "./Home";
-import Counter from "./Hooks/UseState/Counter";
-import Score from "./Hooks/UseState/Score";
-import Run from "./Hooks/UseState/Run";
-import Flipkart from "./Components/Flipkart";
+import React from 'react'
+import Electronics from './Electronics'
+import Mobile from './Mobile'
 
-function App() {
-  return (
-    <div>
-      <center>
-        <h1>Welcome to App Components</h1>
-        <hr />
-        {/* <Counter/> */}
-        <hr />
-        {/* <Score/> */}
-        <Flipkart/>
-      </center>
-    </div>
-  );
-}
+function Flipcart({mobile}){
 
+    console.log(mobile);
+    return (
+        <>
+        <h2>Welcome to flipcart</h2>
+        <p>{mobile}</p>
+        {/*<electronics mobile = {mobile} />*/}
+        </>
 
-
-
-
-export default App;
+    )
+        }
+export default Flipcart 

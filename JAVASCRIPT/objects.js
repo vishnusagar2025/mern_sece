@@ -23,7 +23,7 @@ let emp = [
     {
         emp_id: 200,
         emp_name: "saga",
-        salary: 60000,
+        emp_salary: 60000,
         //nested object
         //key and values
         //key: value    
@@ -39,7 +39,7 @@ let emp = [
 
 console.log(emp[3].skills[1]);    // Output: java
 console.log(emp[4].company.c2);   // Output: Architecture
-console.log(emp[4].salary);       // Output: 60000
+console.log(emp[4].emp_salary);   // Output: 60000
 
 //Dot Notation
 //console.log(emp[0].emp_name);

@@ -15,7 +15,7 @@ function Score(){
 
 function run(){
     const [runs, setRuns] = useState(0);
-    function increment(){````
+    function increment(){
         setRuns(runs+1)
     }
 
